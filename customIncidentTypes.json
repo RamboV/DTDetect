@@ -1,0 +1,188 @@
+[
+	{
+		"id": "DomainTools Iris Detect Blocked Domains",
+		"version": 2,
+		"modified": "2023-01-12T19:18:22.659080144+05:30",
+		"packID": "",
+		"itemVersion": "",
+		"fromServerVersion": "",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"locked": false,
+		"name": "DomainTools Iris Detect Blocked Domains",
+		"prevName": "DomainTools Iris Detect Blocked Domains",
+		"color": "#F50057",
+		"hours": 0,
+		"days": 0,
+		"weeks": 0,
+		"hoursR": 0,
+		"daysR": 0,
+		"weeksR": 0,
+		"system": false,
+		"readonly": false,
+		"default": false,
+		"autorun": false,
+		"preProcessingScript": "",
+		"closureScript": "",
+		"disabled": false,
+		"reputationCalc": 0,
+		"onChangeRepAlg": 0,
+		"layout": "",
+		"detached": false,
+		"extractSettings": {
+			"mode": "Specific",
+			"fieldCliNameToExtractSettings": {
+				"comment": {
+					"extractAsIsIndicatorTypeId": "",
+					"isExtractingAllIndicatorTypes": false,
+					"extractIndicatorTypesIDs": [
+						"domainRepUnified"
+					]
+				}
+			}
+		}
+	},
+	{
+		"id": "DomainTools Iris Detect Changed Domains",
+		"version": 2,
+		"modified": "2023-01-12T19:18:40.938641716+05:30",
+		"packID": "",
+		"itemVersion": "",
+		"fromServerVersion": "",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"locked": false,
+		"name": "DomainTools Iris Detect Changed Domains",
+		"prevName": "DomainTools Iris Detect Changed Domains",
+		"color": "#E57373",
+		"hours": 0,
+		"days": 0,
+		"weeks": 0,
+		"hoursR": 0,
+		"daysR": 0,
+		"weeksR": 0,
+		"system": false,
+		"readonly": false,
+		"default": false,
+		"autorun": false,
+		"preProcessingScript": "",
+		"closureScript": "",
+		"disabled": false,
+		"reputationCalc": 0,
+		"onChangeRepAlg": 0,
+		"layout": "",
+		"detached": false,
+		"extractSettings": {
+			"mode": "Specific",
+			"fieldCliNameToExtractSettings": {
+				"comment": {
+					"extractAsIsIndicatorTypeId": "",
+					"isExtractingAllIndicatorTypes": false,
+					"extractIndicatorTypesIDs": [
+						"domainRepUnified"
+					]
+				}
+			}
+		}
+	},
+	{
+		"id": "DomainTools Iris Detect New Domains",
+		"version": 2,
+		"modified": "2023-01-12T19:18:59.22137019+05:30",
+		"packID": "",
+		"itemVersion": "",
+		"fromServerVersion": "",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"locked": false,
+		"name": "DomainTools Iris Detect New Domains",
+		"prevName": "DomainTools Iris Detect New Domains",
+		"color": "#D1FC40",
+		"hours": 0,
+		"days": 0,
+		"weeks": 0,
+		"hoursR": 0,
+		"daysR": 0,
+		"weeksR": 0,
+		"system": false,
+		"readonly": false,
+		"default": false,
+		"autorun": false,
+		"preProcessingScript": "",
+		"closureScript": "",
+		"disabled": false,
+		"reputationCalc": 0,
+		"onChangeRepAlg": 0,
+		"layout": "",
+		"detached": false,
+		"extractSettings": {
+			"mode": "Specific",
+			"fieldCliNameToExtractSettings": {
+				"comment": {
+					"extractAsIsIndicatorTypeId": "",
+					"isExtractingAllIndicatorTypes": false,
+					"extractIndicatorTypesIDs": [
+						"domainRepUnified"
+					]
+				}
+			}
+		}
+	},
+	{
+		"id": "risDetect Blocked Domains",
+		"version": 1,
+		"modified": "2023-01-10T17:33:38.823068982+05:30",
+		"packID": "",
+		"itemVersion": "",
+		"fromServerVersion": "",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"locked": false,
+		"name": "risDetect Blocked Domains",
+		"prevName": "risDetect Blocked Domains",
+		"color": "#D6EB8D",
+		"hours": 0,
+		"days": 0,
+		"weeks": 0,
+		"hoursR": 0,
+		"daysR": 0,
+		"weeksR": 0,
+		"system": false,
+		"readonly": false,
+		"default": false,
+		"autorun": false,
+		"preProcessingScript": "",
+		"closureScript": "",
+		"disabled": false,
+		"reputationCalc": 0,
+		"onChangeRepAlg": 0,
+		"layout": "",
+		"detached": false,
+		"extractSettings": {
+			"mode": "All",
+			"fieldCliNameToExtractSettings": {
+				"agentid": {
+					"extractAsIsIndicatorTypeId": "",
+					"isExtractingAllIndicatorTypes": false,
+					"extractIndicatorTypesIDs": []
+				}
+			}
+		}
+	}
+]

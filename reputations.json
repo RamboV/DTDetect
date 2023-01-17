@@ -1,0 +1,3654 @@
+[
+	{
+		"id": "Attack Pattern",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.62628153+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "6.1.9",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "STIX Attack Pattern",
+		"prevDetails": "STIX Attack Pattern",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "STIX Attack Pattern"
+	},
+	{
+		"id": "CIDR",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.638279854+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(?:\\[\\.\\]|\\.)){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\\/([0-9]|[1-2][0-9]|3[0-2]))\\b",
+		"details": "CIDR",
+		"prevDetails": "CIDR",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "cidr",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "CIDR(val.Address \u0026\u0026 val.Range === obj.Address)",
+		"contextValue": "Address",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"asn": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "ASN",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geocountry": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Geo.Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geolocation": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Geo.Location",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Internal",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"region": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "Region",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "CIDR",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 10080,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "Campaign",
+		"version": 3,
+		"modified": "2022-02-17T10:30:26.560258478+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Campaign",
+		"prevDetails": "Campaign",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": null,
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": {
+			"aliases": {
+				"simple": "Campaign.aliases"
+			},
+			"description": {
+				"simple": "Campaign.description"
+			},
+			"objective": {
+				"simple": "Campaign.objective"
+			},
+			"stixid": {
+				"simple": "Campaign.stixid"
+			}
+		},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "Campaign"
+	},
+	{
+		"id": "Course of Action",
+		"version": 3,
+		"modified": "2022-02-17T10:30:26.583001731+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Course of Action",
+		"prevDetails": "Course of Action",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": null,
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": {
+			"action": {
+				"simple": "CourseofAction.action"
+			},
+			"description": {
+				"simple": "CourseofAction.description"
+			},
+			"stixid": {
+				"simple": "CourseofAction.stixid"
+			}
+		},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "Course of Action"
+	},
+	{
+		"id": "DomainGlob",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.613662971+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "DomainGlob",
+		"prevDetails": "DomainGlob",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": {},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 20160,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "IPv6",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.609725506+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "(?:[a-fA-F0-9]{1,4}:{1,2}){3,7}[a-fA-F0-9]{1,4}",
+		"details": "IPv6",
+		"prevDetails": "IPv6",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "ipv6",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "VerifyIPv6Indicator",
+		"contextPath": "IPv6(val.Address \u0026\u0026 val.Address === obj.Address)",
+		"contextValue": "Address",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"asn": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "ASN",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geocountry": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Geo.Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geolocation": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Geo.Location",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"hostname": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Hostname",
+					"transformers": []
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Internal",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"port": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Port",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"region": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Region",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "IPv6",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 10080,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "IPv6CIDR",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.598846379+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))(\\/(12[0-8]|1[0-1][0-9]|[1-9][0-9]|[0-9]))\\b",
+		"details": "IPv6CIDR",
+		"prevDetails": "IPv6CIDR",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "IPv6CIDR(val.Address \u0026\u0026 val.Address === obj.Address)",
+		"contextValue": "Address",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"asn": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "ASN",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geocountry": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Geo.Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geolocation": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Geo.Location",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Internal",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"region": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "Region",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "IPv6CIDR",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 10080,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "Infrastructure",
+		"version": 3,
+		"modified": "2022-02-17T10:30:26.588191815+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Infrastructure",
+		"prevDetails": "Infrastructure",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": null,
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": {
+			"aliases": {
+				"simple": "Infrastructure.aliases"
+			},
+			"description": {
+				"simple": "Infrastructure.description"
+			},
+			"infrastructuretypes": {
+				"simple": "Infrastructure.infrastructuretypes"
+			},
+			"killchainphases": {
+				"simple": "Infrastructure.killchainphases"
+			},
+			"stixid": {
+				"simple": "Infrastructure.stixid"
+			}
+		},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "Infrastructure"
+	},
+	{
+		"id": "Intrusion Set",
+		"version": 3,
+		"modified": "2022-02-17T10:30:26.657574454+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Intrusion Set",
+		"prevDetails": "Intrusion Set",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": null,
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": {
+			"aliases": {
+				"simple": "IntrusionSet.aliases"
+			},
+			"description": {
+				"simple": "IntrusionSet.description"
+			},
+			"goals": {
+				"simple": "IntrusionSet.goals"
+			},
+			"primarymotivation": {
+				"simple": "IntrusionSet.primarymotivation"
+			},
+			"resourcelevel": {
+				"simple": "IntrusionSet.resourcelevel"
+			},
+			"secondarymotivations": {
+				"simple": "IntrusionSet.secondarymotivations"
+			},
+			"stixid": {
+				"simple": "IntrusionSet.stixid"
+			}
+		},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "Intrusion Set"
+	},
+	{
+		"id": "Malware",
+		"version": 5,
+		"modified": "2022-02-17T13:47:21.657483574+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "6.1.9",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "STIX Malware",
+		"prevDetails": "STIX Malware",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "STIX Malware"
+	},
+	{
+		"id": "Onion Address",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.664796559+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b((https?):\\/ֿֿֿֿ\\/)?([a-z2-7]{17}|[a-z2-7]{57})\\.onion\\b",
+		"details": "Onion Address",
+		"prevDetails": "Onion Address",
+		"legacyNames": null,
+		"reputationScriptName": "OnionURLReputation",
+		"reputationCommand": "",
+		"enhancementScriptNames": null,
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "Onion.Address",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "Report",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.622220769+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "6.1.9",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "STIX Report",
+		"prevDetails": "STIX Report",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "STIX Report"
+	},
+	{
+		"id": "Threat Actor",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.653832916+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "6.1.9",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "STIX Threat Actor",
+		"prevDetails": "STIX Threat Actor",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "STIX Threat Actor"
+	},
+	{
+		"id": "Tool",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.64133111+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "6.1.9",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "STIX Tool",
+		"prevDetails": "STIX Tool",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "STIX Tool"
+	},
+	{
+		"id": "accountRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.633300372+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Account",
+		"prevDetails": "Account",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"accounttype": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Type",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"displayname": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "DisplayName",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"domainname": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Domain",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"emailaddress": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Email.Address",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"groups": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Groups",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"indicatoridentification": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "ID",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"organizationalunitou": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "OrganizationUnit",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"username": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Username",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "accountRep"
+	},
+	{
+		"id": "b6b424f1-ccfa-4fbb-8147-105703a9d7fb",
+		"version": 1,
+		"modified": "2023-01-12T19:22:42.811350889+05:30",
+		"packID": "",
+		"itemVersion": "",
+		"fromServerVersion": "",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "DomainTools Iris Detect ",
+		"prevDetails": "DomainTools Iris Detect ",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [
+			"DomainReputation"
+		],
+		"system": false,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": null,
+		"manualMapping": {},
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "cad52b9d-4857-4b9d-8ae0-640336b7b425"
+	},
+	{
+		"id": "cveRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.669521995+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "CVE-\\d{4}-\\d{4,7}",
+		"details": "CVE",
+		"prevDetails": "CVE",
+		"legacyNames": null,
+		"reputationScriptName": "cveReputation",
+		"reputationCommand": "cve",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "CVE(val.ID \u0026\u0026 val.ID === obj.ID)",
+		"contextValue": "ID",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"associations": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"cvedescription": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "Description",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"cvemodified": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "Modified",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"cvss": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "CVSS",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"indicatoridentification": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "ID",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"published": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "Published",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "CVE",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "cveRep"
+	},
+	{
+		"id": "domainRepUnified",
+		"version": 8,
+		"modified": "2023-01-10T18:37:34.496404866+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "(?:[._%+\\p{L}\\p{N}-]+|\\[\\.\\])+(?:\\[\\.\\]|\\.)[\\p{L}]{2,}|(?:https:\\/\\/\\w*|\\w*)\\.safelinks\\.protection\\.outlook\\.com\\/[^\\s]*|https:\\/\\/urldefense\\.(?:proofpoint\\.)?com\\/.*",
+		"details": "Domain",
+		"prevDetails": "Domain",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "domain",
+		"enhancementScriptNames": [
+			"DomainReputation"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "ExtractDomainAndFQDNFromUrlAndEmail",
+		"contextPath": "Domain(val.Name \u0026\u0026 val.Name === obj.Name)",
+		"contextValue": "Name",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"admincountry": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Admin.Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"adminemail": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Admin.Email",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"adminname": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Admin.Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"adminphone": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Admin.Phone",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"communitynotes": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "CommunityNotes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"creationdate": {
+				"complex": {
+					"root": "Domain",
+					"filters": [
+						[
+							{
+								"operator": "isExists",
+								"left": {
+									"value": {
+										"simple": "Domain.CreationDate"
+									},
+									"isContext": true
+								}
+							}
+						]
+					],
+					"accessor": "CreationDate",
+					"transformers": [
+						{
+							"operator": "uniq"
+						},
+						{
+							"operator": "DateStringToISOFormat",
+							"args": {
+								"dayfirst": {},
+								"fuzzy": {},
+								"yearfirst": {}
+							}
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"dns": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "DNS",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"domainstatus": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "DomainStatus",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"expirationdate": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "ExpirationDate",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"feedrelatedindicators": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "FeedRelatedIndicators",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Internal",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"malwarefamily": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "MalwareFamily",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"nameservers": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "NameServers",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"organization": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Admin.Organization",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"publications": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Publications",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrantcountry": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Registrant.country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrantemail": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Registrant.email",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrantname": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Registrant.name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrantphone": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Registrant.phone",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabuseemail": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Whois.Registrar.AbuseEmail",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabusephone": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Registrar.AbusePhone",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarname": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Whois.Registrar.Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"subdomains": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Subdomains",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocoltlp": {
+				"complex": {
+					"root": "Domain",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"updateddate": {
+				"complex": {
+					"root": "Domain",
+					"filters": [
+						[
+							{
+								"operator": "isExists",
+								"left": {
+									"value": {
+										"simple": "Domain.UpdatedDate"
+									},
+									"isContext": true
+								}
+							}
+						]
+					],
+					"accessor": "UpdatedDate",
+					"transformers": [
+						{
+							"operator": "uniq"
+						},
+						{
+							"operator": "DateStringToISOFormat",
+							"args": {
+								"dayfirst": {},
+								"fuzzy": {},
+								"yearfirst": {}
+							}
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 20160,
+		"shouldShareComments": false,
+		"layout": "domainRepUnified"
+	},
+	{
+		"id": "emailRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.536505099+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b[A-Za-z0-9.!#$%\u0026'*+/=?^_`{|}~\\p{L}-]{1,64}(@|\\[@\\])[A-Za-z0-9\\p{L}.-]{1,255}\\.[A-Za-z]{2,}\\b",
+		"details": "Email",
+		"prevDetails": "Email",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "email",
+		"enhancementScriptNames": [
+			"EmailReputation"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "ExtractEmailV2",
+		"contextPath": "Account.Email(val.Address \u0026\u0026 val.Address === obj.Address)",
+		"contextValue": "Address",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"blocked": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"domainname": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Domain",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"emailaddress": {
+				"complex": {
+					"root": "Account",
+					"filters": [],
+					"accessor": "Email.Address",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "emailRep"
+	},
+	{
+		"id": "hashRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.602536096+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b[a-fA-F\\d]{32}\\b",
+		"details": "File MD5",
+		"prevDetails": "File MD5",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "file",
+		"enhancementScriptNames": [
+			"FileReputation",
+			"SplunkPySearch"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": true,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "File(val.MD5 \u0026\u0026 val.MD5 === obj.MD5)",
+		"contextValue": "MD5",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "hashRepSHA1",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.546396222+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b[a-fA-F\\d]{40}\\b",
+		"details": "File SHA-1",
+		"prevDetails": "File SHA-1",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "file",
+		"enhancementScriptNames": [
+			"FileReputation",
+			"SplunkPySearch"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": true,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "File(val.SHA1 \u0026\u0026 val.SHA1 === obj.SHA1)",
+		"contextValue": "SHA1",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "hashRepSHA256",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.644572381+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b[a-fA-F\\d]{64}\\b",
+		"details": "File SHA-256",
+		"prevDetails": "File SHA-256",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "file",
+		"enhancementScriptNames": [
+			"FileReputation"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": true,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "File(val.SHA256 \u0026\u0026 val.SHA256 === obj.SHA256)",
+		"contextValue": "SHA256",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "hostRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.673690844+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Host",
+		"prevDetails": "Host",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"associations": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"biosversion": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "BIOVersion",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"devicemodel": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Model",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"dhcpserver": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "DHCPServer",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"domainname": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Domain",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"indicatoridentification": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "ID",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"ipaddress": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "IP",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"macaddress": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "MACAddress",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"memory": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Memory",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"operatingsystem": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "OS",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"operatingsystemversion": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "OSVersion",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"processor": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Processor",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"processors": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Processors",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"quarantined": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Quarantined",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "Host",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "hostRep"
+	},
+	{
+		"id": "ipRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.591334579+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(?:\\[\\.\\]|\\.)){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\b",
+		"details": "IP",
+		"prevDetails": "IP",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "ip",
+		"enhancementScriptNames": [
+			"IPReputation",
+			"SplunkPySearch"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "UnEscapeIPs",
+		"contextPath": "IP(val.Address \u0026\u0026 val.Address === obj.Address)",
+		"contextValue": "Address",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"asn": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "ASN",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"asowner": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "ASOwner",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"communitynotes": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "CommunityNotes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"feedrelatedindicators": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "FeedRelatedIndicators",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geocountry": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Geo.Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geolocation": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Geo.Location",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"hostname": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Hostname",
+					"transformers": []
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "IP",
+					"filters": [
+						[
+							{
+								"operator": "IsInCidrRanges",
+								"left": {
+									"value": {
+										"simple": "IP.Address"
+									},
+									"isContext": true
+								},
+								"right": {
+									"value": {
+										"simple": "192.168.0.0/16,172.16.0.0/12,10.0.0.0/8,127.0.0.0/8,169.254.0.0/16"
+									}
+								}
+							}
+						]
+					],
+					"accessor": "Address",
+					"transformers": [
+						{
+							"operator": "uniq"
+						},
+						{
+							"operator": "DT",
+							"args": {
+								"dt": {
+									"value": {
+										"simple": ".=Boolean(val)"
+									}
+								}
+							}
+						}
+					]
+				}
+			},
+			"malwarefamily": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "MalwareFamily",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"organization": {
+				"complex": {
+					"root": "IP.Organization",
+					"filters": [],
+					"accessor": "Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"organizationtype": {
+				"complex": {
+					"root": "IP.Organization",
+					"filters": [],
+					"accessor": "Type",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"port": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Port",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"publications": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Publications",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"region": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Region",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabuseaddress": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Address",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabusecountry": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabuseemail": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Email",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabusename": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabusenetwork": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Network",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registrarabusephone": {
+				"complex": {
+					"root": "IP.Registrar.Abuse",
+					"filters": [],
+					"accessor": "Phone",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "IP",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 10080,
+		"shouldShareComments": false,
+		"layout": "ipRep"
+	},
+	{
+		"id": "registryKey",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.541804201+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "Registry Key",
+		"prevDetails": "Registry Key",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"associations": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"namefield": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"path": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "Path",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"registryvalue": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "Value",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "RegistryKey",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "registryKey"
+	},
+	{
+		"id": "ssdeepRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.650881829+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.0.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "",
+		"details": "ssdeep",
+		"prevDetails": "ssdeep",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "",
+		"enhancementScriptNames": [],
+		"system": true,
+		"locked": false,
+		"disabled": true,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "",
+		"contextValue": "",
+		"excludedBrands": null,
+		"defaultMapping": null,
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": ""
+	},
+	{
+		"id": "unifiedFileRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.618852465+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "\\b[a-fA-F\\d]{32}\\b|\\b[a-fA-F\\d]{40}\\b|\\b[a-fA-F\\d]{64}\\b|\\b[a-fA-F\\d]{128}\\b",
+		"details": "File",
+		"prevDetails": "File",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "file",
+		"enhancementScriptNames": [
+			"FileReputation",
+			"SplunkSearch",
+			"WildfireReport"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "",
+		"contextPath": "File(val.SHA256 \u0026\u0026 val.SHA256 === obj.SHA256 || val.SHA1 \u0026\u0026 val.SHA1 === obj.SHA1 || val.MD5 \u0026\u0026 val.MD5 === obj.MD5 || val.SHA512 \u0026\u0026 val.SHA512 === obj.SHA512 || val.SSDeep \u0026\u0026 val.SSDeep === obj.SSDeep)",
+		"contextValue": "",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"actor": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Actor",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associatedfilenames": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Name",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"behavior": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Behavior",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"simple": "File.Blocked"
+			},
+			"communitynotes": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "CommunityNotes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"entryid": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "EntryID",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"feedrelatedindicators": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "FeedRelatedIndicators",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"fileextension": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Extension",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"filetype": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Type",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"malwarefamily": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "MalwareFamily",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"md5": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "MD5",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"path": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Path",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"publications": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Publications",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"quarantined": {
+				"simple": "File.Quarantined"
+			},
+			"reportedby": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"sha1": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "SHA1",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						}
+					]
+				}
+			},
+			"sha256": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "SHA256",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"sha512": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "SHA512",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						},
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signatureauthentihash": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.Authentihash",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signaturecopyright": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.Copyright",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signaturedescription": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.Description",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signaturefileversion": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.FileVersion",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signatureinternalname": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.InternalName",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signatureoriginalname": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signature.OriginalName",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signed": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Signed",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"size": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Size",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"ssdeep": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "SSDeep",
+					"transformers": [
+						{
+							"operator": "toUpperCase"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "File",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": [
+			"ssdeep",
+			"sha512",
+			"md5",
+			"sha1",
+			"sha256"
+		],
+		"expiration": 0,
+		"shouldShareComments": false,
+		"layout": "unifiedFileRep1"
+	},
+	{
+		"id": "urlRep",
+		"version": 4,
+		"modified": "2022-02-17T10:30:26.648021565+05:30",
+		"packID": "CommonTypes",
+		"itemVersion": "3.2.20",
+		"fromServerVersion": "5.5.0",
+		"toServerVersion": "",
+		"definitionId": "",
+		"vcShouldIgnore": false,
+		"vcShouldKeepItemLegacyProdMachine": false,
+		"commitMessage": "",
+		"shouldCommit": false,
+		"regex": "(?i)((?:(?:https?|ftps?|hxxps?|sftp|meows):((\\/\\/)|(\\\\\\\\))(www\\[?\\.\\]?)?|ftp\\[?\\.\\]?))(?:[-_\\d\\p{L}\\p{S}]+\\[?\\.\\]?)+[-_\\d\\p{L}\\[\\]]+(?::\\d+)?(?:(?:((\\/)|(\\*)|(\\#)|(\\?)))+(?:[-\\d\\p{L}+\u0026@'#\\/%=~_$!\\-:.;\\\\*–—―|\\[\\]]*|\\([-\\d\\p{L}\\+\u0026@#\\/%=~_\\$\\?!\\-:,;\\\\\\*–—―\\|\\[\\]]*\\))*)*|((?i)((((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.)+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|(([\\[\\]\\p{L}\\dֿ]+\\[?\\.\\]?){1,3}[\\p{L}]+))(:[\\d]+)?\\/([-\\p{L}\\+\u0026@#\\/%=~_\\$\\?!\\-:,;\\\\\\*–—―\\|\\.]+([\\d]*)?)+)|((?:(?:https?|ftps?|hxxps?|sftp):((\\/\\/)|(\\\\\\\\)))[\\d][\\S]+)|(((https?|ftps?|hxxps?|sftp):((\\/\\/)|(\\\\\\\\)))?(\\[)?(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))(\\])?(:[\\d]+)?(((\\/|\\\\)[\\d]+(\\/|\\\\)[-\\d\\p{L}+\u0026@'#\\/%=~_$!\\-:.;\\\\*–—―|\\[\\]]+)|((\\/|\\\\)[^\\d \\n\\t]+)))",
+		"details": "URL",
+		"prevDetails": "URL",
+		"legacyNames": null,
+		"reputationScriptName": "",
+		"reputationCommand": "url",
+		"enhancementScriptNames": [
+			"URLReputation",
+			"SplunkPySearch"
+		],
+		"system": true,
+		"locked": false,
+		"disabled": false,
+		"file": false,
+		"updateAfter": 0,
+		"mergeContext": false,
+		"formatScript": "FormatURL",
+		"contextPath": "URL(val.Data \u0026\u0026 val.Data === obj.Data)",
+		"contextValue": "Data",
+		"excludedBrands": [],
+		"defaultMapping": {
+			"asn": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "ASN",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"asowner": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "ASOwner",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"associations": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Associations",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"blocked": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Blocked",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"category": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Category",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"communitynotes": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "CommunityNotes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"detectionengines": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "DetectionEngines",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"feedrelatedindicators": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "FeedRelatedIndicators",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"geocountry": {
+				"complex": {
+					"root": "URL.Geo",
+					"filters": [],
+					"accessor": "Country",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"internal": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Internal",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"malwarefamily": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "MalwareFamily",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"positivedetections": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "PositiveDetections",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"publications": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Publications",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"reportedby": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "ReportedBy",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"signed": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Signed",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"tags": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "Tags",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"threattypes": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "ThreatTypes",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			},
+			"trafficlightprotocol": {
+				"complex": {
+					"root": "URL",
+					"filters": [],
+					"accessor": "TrafficLightProtocol",
+					"transformers": [
+						{
+							"operator": "uniq"
+						}
+					]
+				}
+			}
+		},
+		"manualMapping": null,
+		"fileHashesPriority": null,
+		"expiration": 43200,
+		"shouldShareComments": false,
+		"layout": "urlRep"
+	}
+]
